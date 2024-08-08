@@ -10,7 +10,7 @@ expenses = []
 @app.route('/')
 def home():
     total_expenses = sum(expense['amount'] for expense in expenses)
-    return render_template('tech_Alpha.html', expenses=enumerate(expenses), total_expenses=total_expenses)
+    return render_template('index.html', expenses=enumerate(expenses), total_expenses=total_expenses)
 
 # Route to add new expense
 @app.route('/add', methods=['POST'])
